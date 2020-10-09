@@ -13,11 +13,11 @@ public class David {
 
     public void start() {
         Game GenshinImpact = new Game("Genshin impact", "Action role-playing");
-        Building ITB = new Building(),Home = new Building();
+        Building ITB = new Building(), Home = new Building();
 
         while (alive) {
             switch (hora.format(DateTimeFormatter.ofPattern("HH:mm"))) {
-                case "11:00" ->  {
+                case "11:00" -> {
                     if (haveHomework) doHomework();
                     else play(GenshinImpact);
                 }
@@ -43,6 +43,7 @@ public class David {
     }
 
     public void sleep(int horas) {
+        happiness = happiness + 10;
         hora = hora.plusHours(horas);
     }
 

@@ -1,5 +1,6 @@
 public class Game {
-    private String name, genre;
+    private final String name;
+    private final String genre;
 
     public Game(String name, String genre) {
         this.name = name;
